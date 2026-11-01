@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Smart AI Study Buddy helps students learn, practice, and improve with an AI-powered study companion." />
+  <title>Smart AI Study Buddy</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <a class="brand" href="#" data-page="home"><span class="brand-mark">✦</span><span>Study<span class="brand-accent">Buddy</span><small>LEARN SMARTER</small></span></a>
+      <div class="side-label">WORKSPACE</div>
+      <nav class="nav-list">
+        <button class="nav-item active" data-page="home"><span>⌂</span> Dashboard</button>
+        <button class="nav-item" data-page="chat"><span>✧</span> AI Study Assistant</button>
+        <button class="nav-item" data-page="math"><span>∑</span> Math Solver</button>
+        <button class="nav-item" data-page="language"><span>文</span> Language Learning</button>
+        <button class="nav-item" data-page="quiz"><span>▤</span> MCQs & Quizzes</button>
+        <button class="nav-item" data-page="evaluate"><span>✓</span> Answer Evaluator</button>
+        <button class="nav-item" data-page="progress"><span>◷</span> My Progress</button>
+      </nav>
+      <div class="sidebar-bottom">
+        <div class="study-tip"><div class="tip-icon">✦</div><strong>Little steps, big progress.</strong><p>Stay curious. Keep learning. Your future self will thank you.</p></div>
+        <button class="nav-item" id="themeToggle"><span>◐</span> Toggle appearance</button>
+        <div class="user-mini"><div class="avatar" id="userAvatar">S</div><div><strong id="userNameMini">Guest student</strong><small id="userEmailMini">Sign in to save progress</small></div><button class="logout-btn" id="logoutBtn" title="Log out" hidden>↗</button></div>
+      </div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <button class="mobile-menu" id="mobileMenu">☰</button>
+        <div class="breadcrumb">Workspace <span>/</span> <strong id="pageCrumb">Dashboard</strong></div>
+        <div class="top-actions"><span class="status-pill"><i></i> Your learning space</span><button class="icon-btn" id="authOpen" title="Sign in">♙</button></div>
+      </header>
+
+      <section class="page active" id="page-home">
+        <div class="welcome-row"><div><div class="eyebrow">SUNDAY, NOVEMBER 1, 2026</div><h1>Make today a <span>learning day.</span> ✨</h1><p class="muted">Your personal space to explore, practice, and grow.</p></div><div class="welcome-art"><div class="art-orbit">✦</div><div class="art-book">📚</div><span class="art-spark s1">✧</span><span class="art-spark s2">✦</span></div></div>
+        <div class="hero-card"><div><div class="hero-kicker">YOUR AI LEARNING COMPANION</div><h2>Curiosity is your<br>superpower.</h2><p>Ask questions, solve problems, and build knowledge one step at a time.</p><button class="btn btn-light" data-go="chat">Talk to your AI buddy <span>↗</span></button></div><div class="hero-graphic"><div class="glow"></div><div class="hero-emoji">🧠</div><div class="float-note note-one">✦ Learn</div><div class="float-note note-two">↗ Grow</div></div></div>
+        <div class="section-heading"><div><h2>Your learning tools</h2><p>Everything you need, all in one place.</p></div><span class="section-count">06 TOOLS</span></div>
+        <div class="tool-grid">
+          <button class="tool-card purple" data-go="math"><span class="tool-icon">∑</span><span class="tool-tag">AI POWERED</span><h3>Math Solver</h3><p>Break down difficult problems into simple steps.</p><span class="card-arrow">↗</span></button>
+          <button class="tool-card orange" data-go="language"><span class="tool-icon">文</span><span class="tool-tag">LEARN LANGUAGES</span><h3>Urdu & Sindhi</h3><p>Build vocabulary, practice grammar, and translate.</p><span class="card-arrow">↗</span></button>
+          <button class="tool-card blue" data-go="quiz"><span class="tool-icon">▤</span><span class="tool-tag">TEST YOURSELF</span><h3>MCQs & Quizzes</h3><p>Practice questions and discover what you know.</p><span class="card-arrow">↗</span></button>
+          <button class="tool-card green" data-go="evaluate"><span class="tool-icon">✓</span><span class="tool-tag">PERSONAL FEEDBACK</span><h3>Answer Evaluator</h3><p>Get helpful feedback and improve your answers.</p><span class="card-arrow">↗</span></button>
+          <button class="tool-card pink" data-go="chat"><span class="tool-icon">✧</span><span class="tool-tag">ALWAYS READY</span><h3>AI Study Assistant</h3><p>Ask anything and learn at your own pace.</p><span class="card-arrow">↗</span></button>
+          <button class="tool-card teal" data-go="progress"><span class="tool-icon">◷</span><span class="tool-tag">YOUR JOURNEY</span><h3>My Progress</h3><p>Keep track of quiz scores and study activity.</p><span class="card-arrow">↗</span></button>
+        </div>
+        <div class="bottom-grid"><div class="panel"><div class="panel-heading"><div><h3>Study tip of the day</h3><p>A small habit to make learning easier.</p></div><span class="panel-icon">☀</span></div><div class="quote-box">“The beautiful thing about learning is that nobody can take it away from you.”<small>Make time for focused practice today.</small></div></div><div class="panel"><div class="panel-heading"><div><h3>Ready when you are</h3><p>Pick up where curiosity takes you.</p></div></div><div class="quick-links"><button data-go="math">∑ <span>Try a math problem</span> ↗</button><button data-go="quiz">▤ <span>Take a quick quiz</span> ↗</button><button data-go="language">文 <span>Learn a new word</span> ↗</button></div></div></div>
+      </section>
+
+      <section class="page" id="page-chat">
+        <div class="page-intro"><div class="eyebrow">YOUR PERSONAL TUTOR</div><h1>AI Study Assistant <span>✧</span></h1><p>Ask questions, explore ideas, and understand topics in your own way.</p></div>
+        <div class="workspace-card chat-card"><div class="chat-top"><div class="bot-avatar">✦</div><div><strong>Your Study Buddy</strong><small><i></i> Ready to help</small></div><select id="chatLanguage" class="small-select"><option>English</option><option>Urdu</option><option>Roman Urdu</option><option>Sindhi</option></select></div><div class="chat-messages" id="chatMessages"><div class="message assistant"><div class="message-avatar">✦</div><div class="bubble">Hey there! 👋 I'm your Study Buddy. What are you learning today? You can ask me to explain a topic, create notes, or help with homework.</div></div></div><div class="suggestions"><button>Explain photosynthesis simply</button><button>Give me study tips</button><button>What is an algorithm?</button></div><form class="chat-compose" id="chatForm"><textarea id="chatInput" placeholder="Ask your study question..." rows="1" required></textarea><button class="send-btn" type="submit">↑</button></form><div class="disclaimer">AI can make mistakes. Double-check important academic information.</div></div>
+      </section>
+
+      <section class="page" id="page-math">
+        <div class="page-intro"><div class="eyebrow">UNDERSTAND EVERY STEP</div><h1>Math Solver <span>∑</span></h1><p>Put in a problem and let your AI tutor walk you through it.</p></div>
+        <div class="workspace-card form-workspace"><div class="form-heading"><span class="big-icon purple-bg">∑</span><div><h2>Let's solve it together</h2><p>Type your problem or upload a clear picture.</p></div></div><form id="mathForm"><label for="mathQuestion">Your math problem</label><textarea id="mathQuestion" rows="4" placeholder="Example: Solve 2x + 6 = 14 and explain each step..."></textarea><label class="upload-box" for="mathImage"><span class="upload-icon">＋</span><span><strong>Upload a problem image</strong><small>PNG, JPG or WEBP · Max 5MB</small></span><span class="upload-action">Browse files</span><input id="mathImage" type="file" accept="image/png,image/jpeg,image/webp" hidden></label><div id="imageName" class="file-name"></div><button class="btn btn-primary" type="submit">Solve step by step <span>↗</span></button></form><div class="result-box" id="mathResult" hidden></div></div>
+        <div class="example-chips"><span>TRY AN EXAMPLE</span><button data-math="Solve 3x - 9 = 12">Linear equation</button><button data-math="Find the area of a circle with radius 7 cm">Geometry</button><button data-math="What is 25% of 480?">Percentage</button></div>
+      </section>
+
+      <section class="page" id="page-language">
+        <div class="page-intro"><div class="eyebrow">WORDS OPEN DOORS</div><h1>Language Learning <span>文</span></h1><p>Practice Urdu and Sindhi with your own AI language teacher.</p></div>
+        <div class="language-banner"><div><span class="banner-label">LANGUAGE CORNER</span><h2>Learn a little.<br>Speak with confidence.</h2><p>Translate, understand grammar, and grow your vocabulary.</p></div><div class="language-symbols"><span>ا ب پ</span><span>سنڌي</span></div></div>
+        <div class="workspace-card language-workspace"><form id="languageForm"><div class="two-fields"><div><label>I'm learning</label><select id="targetLanguage"><option>Urdu</option><option>Sindhi</option></select></div><div><label>My level</label><select id="languageLevel"><option>Beginner</option><option>Intermediate</option><option>Advanced</option></select></div></div><div class="two-fields"><div><label>Task</label><select id="languageMode"><option>Translate</option><option>Explain grammar</option><option>Teach vocabulary</option><option>Make practice exercise</option></select></div><div><label>From</label><select id="sourceLanguage"><option>English</option><option>Urdu</option><option>Sindhi</option></select></div></div><label for="languageInput">Word, sentence, or topic</label><textarea id="languageInput" rows="3" placeholder="Type a sentence or a topic you want to learn..." required></textarea><button class="btn btn-primary" type="submit">Start learning <span>↗</span></button></form><div class="result-box" id="languageResult" hidden></div></div>
+      </section>
+
+      <section class="page" id="page-quiz">
+        <div class="page-intro"><div class="eyebrow">PRACTICE MAKES PROGRESS</div><h1>MCQs & Quizzes <span>▤</span></h1><p>Challenge yourself, check your knowledge, and learn from every answer.</p></div>
+        <div class="workspace-card quiz-setup" id="quizSetup"><div class="form-heading"><span class="big-icon blue-bg">▤</span><div><h2>Build your quick quiz</h2><p>Choose a subject and difficulty to get started.</p></div></div><div class="two-fields"><div><label>Subject</label><select id="quizSubject"><option>All</option><option>Mathematics</option><option>Computer Science</option><option>General Science</option></select></div><div><label>Difficulty</label><select id="quizDifficulty"><option>All</option><option>Easy</option><option>Medium</option><option>Hard</option></select></div></div><button class="btn btn-primary" id="startQuiz">Start quiz <span>↗</span></button><p class="form-note">Questions are selected from the built-in practice bank. Sign in to save your results.</p></div><div class="workspace-card quiz-area" id="quizArea" hidden></div><div class="workspace-card quiz-result" id="quizResult" hidden></div>
+      </section>
+
+      <section class="page" id="page-evaluate">
+        <div class="page-intro"><div class="eyebrow">LEARN FROM YOUR MISTAKES</div><h1>Answer Evaluator <span>✓</span></h1><p>Submit your answer and get supportive, detailed feedback from your AI tutor.</p></div>
+        <div class="workspace-card form-workspace"><div class="form-heading"><span class="big-icon green-bg">✓</span><div><h2>Let's review your answer</h2><p>Understand what you did well and what you can improve.</p></div></div><form id="evaluateForm"><label>Subject</label><select id="evalSubject"><option>General</option><option>Mathematics</option><option>Computer Science</option><option>Science</option><option>Language</option></select><label for="evalQuestion">Question</label><textarea id="evalQuestion" rows="3" placeholder="Write the original question..." required></textarea><label for="evalAnswer">Your answer</label><textarea id="evalAnswer" rows="5" placeholder="Write your answer here..." required></textarea><button class="btn btn-primary" type="submit">Evaluate my answer <span>↗</span></button></form><div class="result-box" id="evaluateResult" hidden></div></div>
+      </section>
+
+      <section class="page" id="page-progress">
+        <div class="page-intro"><div class="eyebrow">YOUR LEARNING JOURNEY</div><h1>My Progress <span>◷</span></h1><p>Celebrate your effort and see how your practice is adding up.</p></div><div class="stats-grid"><div class="stat-card"><span>QUIZZES COMPLETED</span><strong id="totalQuizzes">0</strong><small>Keep practicing</small></div><div class="stat-card"><span>AVERAGE SCORE</span><strong id="averageScore">0%</strong><small>Across saved quizzes</small></div><div class="stat-card"><span>ACCOUNT</span><strong id="accountStatus">Guest</strong><small>Sign in to save progress</small></div></div><div class="workspace-card"><div class="panel-heading"><div><h2>Recent quiz activity</h2><p>Your latest saved attempts.</p></div></div><div id="attemptList" class="attempt-list"><div class="empty-state">Sign in and complete a quiz to see your learning history here.</div></div></div></section>
+
+      <footer class="footer"><span>✦ Smart AI Study Buddy</span><span>Made for curious minds.</span></footer>
+    </main>
+  </div>
+
+  <div class="modal-backdrop" id="authModal" hidden><div class="auth-modal"><button class="modal-close" id="authClose">×</button><div class="auth-brand">✦ StudyBuddy</div><h2 id="authTitle">Welcome back</h2><p id="authSubtitle">Sign in to save your learning progress.</p><div class="auth-tabs"><button class="selected" data-auth="login">Sign in</button><button data-auth="register">Create account</button></div><form id="authForm"><div id="nameField" hidden><label>Your name</label><input id="authName" autocomplete="name" placeholder="Your name"></div><label>Email address</label><input id="authEmail" type="email" autocomplete="email" placeholder="you@example.com" required><label>Password</label><input id="authPassword" type="password" autocomplete="current-password" placeholder="At least 8 characters" required minlength="8"><button class="btn btn-primary full-btn" type="submit" id="authSubmit">Sign in</button></form><p class="auth-message" id="authMessage"></p></div></div>
+  <div class="toast" id="toast"></div>
+  <script src="/app.js"></script>
+</body>
+</html>
